@@ -1,0 +1,54 @@
+:root {
+    --mainColor: #0095aa;
+    --secondaryColor: #000;
+    --textColor: #fff;
+    --backGroundColor: #dfdfdf;
+    --cardColor: #dfdfdf;
+    --shadowColor: #5f5f5f;
+}
+
+html{
+    font-family: Arial, sans-serif;
+}
+
+body{
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr auto 1fr;
+}
+
+.header{
+    margin: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--backGroundColor);
+}
+.header img{
+    width: 150px;
+}
+.header nav{
+    display: flex;
+    text-decoration: none;
+    gap: 15px;
+}
+.header nav a{
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    transition: all 0.2s;
+    color: var(--secondaryColor);
+}
+.header nav a:hover{
+    color: var(--textColor);
+    transition: all 0.2s;
+    transform: translateY(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    background-color: var(--mainColor);
+}
