@@ -93,3 +93,142 @@ body {
     color: var(--textColor);
     font-weight: bold;
 }
+section{
+    padding: 100px 200px;
+}
+.main{
+    display: flex;
+    align-items: center;
+    background-size: cover;
+    min-height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(images/pexels-jakubzerdzicki-34126033.jpg);
+    background-size: cover;
+}
+
+.main h1{
+    color: white;
+    font-size: 1.4em;
+    font-weight: 500;
+}
+.main h1 span{
+    display: inline-block;
+    margin-top:10px ;
+    color: antiquewhite;
+    font-size: 3em;
+    font-weight: 600;
+}
+.main h3{
+    color: white;
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.main-btn{
+    text-decoration: none;
+    color: white;
+    background-color: blue;
+    font-size: 1.1em;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+    padding: 0.9em 2em;
+    border-radius: 10px;
+    transition: 0.7s ease;
+}
+.main-btn:hover{
+    background-color: rgb(14, 14, 155);
+    transform: scale(1.1);
+}
+/*secnnd section*/
+.content {
+   
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
+}
+.projects .title{
+   font-size: 2em;
+   font-weight: 700;
+   margin-bottom: 40px;
+}
+.projects{
+    background-color: rgb(94, 161, 227);
+}
+.project-card{
+    background-color: white;
+    border: 1px solid white;
+    min-height: 14em;
+    width:22em;
+    overflow: hidden;
+    border-radius: 8px; 
+    margin: 20px;
+    transition: 0.7s ease;
+    box-shadow: 0 5px 20px rgba(150, 150, 150, 0.3);
+    
+}
+.project-card:hover{
+    transform: scale(1.1);
+}
+.project-card:hover .project-image{
+    opacity: 0.9;
+}
+.project-image img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.project-info{
+    padding: 1.5em;
+}
+.project-category{
+    color: green;
+    font-size: 1.5em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.project-description{
+    color: #555;
+    margin-top: 15px; 
+    margin-bottom: 15px;
+    display: block;
+    font-size: 1.4em;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.project-icon{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    margin-top: 10px;
+}
+
+
+.house-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+
+.project-icon span {
+    display: flex; 
+    align-items: center;
+    gap: 3px; 
+    font-size: 1.5em;
+    color: #333;
+}
+
+.more-details {
+    color: white;
+    background-color: blue;
+    text-decoration: none;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.9em 1em;
+}
+
