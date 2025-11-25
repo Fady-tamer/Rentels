@@ -50,7 +50,7 @@ body {
     color: var(--secondaryColor);
 }
 
-.userImg{
+.userImg {
     width: 25px;
     height: 25px;
     border-radius: 50%;
@@ -65,15 +65,31 @@ body {
     background-color: var(--mainColor);
 }
 
-
-.footer{
+.footer {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     background-color: var(--mainColor);
 }
-.footer p{
+
+.footerLink {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.footerLink img{
+    width: 20px;
+}
+
+.footer p {
+    margin: 10px 0;
+    text-align: center;
     color: var(--textColor);
     font-weight: bold;
 }

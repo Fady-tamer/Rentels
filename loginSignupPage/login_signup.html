@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../img/icon wbg.png" type="image/x-icon">
+    <title>Rentals</title>
+</head>
+
+<body>
+    <div id="log in">
+        <summary class="log in">Log In</summary>
+        <form>
+            <label>
+                Username:<br>
+                <input type="text" name="username" maxlength="45" minlength="2" required>
+            </label>
+            <label>
+                Password:<br>
+                <input type="password" name="password" maxlength="20" minlength="5" required>
+            </label>
+            <label>
+                <input type="checkbox" name="remember">
+                Remember Me
+            </label>
+            <button class="b-log in" type="log in">Log In</button>
+            <button class="reset-1" type="reset">reset</button>
+        </form>
+        <br>
+    </div>
+    <div>
+        <summary class="sign up">sign up</summary>
+        <form>
+            <label>
+                username:<br>
+                <input type="text" name="username" maxlength="45" minlength="2" required>
+            </label>
+            <label>
+                email:<br>
+                <input type="text" name="email" maxlength="100" min="4" required>
+            </label>
+            <label>
+                phone:<br>
+                <input type="tel" name="phone" pattern="[0-9]{0-11}" min="0" maxlength="11" required>
+            </label>
+            <label>
+                password: <br>
+                <input type="password" name="password" maxlength="20" minlength="5" required>
+            </label>
+            <button class=" b-sign up" type="sign up">sign up</button>
+            <button class="reset-2" type="reset">reset</button>
+            <p>
+                Already have an account?
+                <a href="#log in">log in here</a>
+            </p>
+        </form>
+
+    </div>
+</body>
+
+</html>
