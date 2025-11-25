@@ -11,113 +11,54 @@
 
 <body>
     <div class="header">
-        <img class="headerImg" src="img/project logo wbg.png" alt="header logo">
+        <a href="index.html"><img class="headerImg" src="img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
             <a class="navigationBarLink" href="index.html">Home</a>
             <a class="navigationBarLink" href="#">About Us</a>
             <a class="navigationBarLink" href="loginSignupPage/login_signup.html">Login / Sign Up</a>
-            <a href="#">
+            <a href="userProfilePage/user.html">
                 <img class="userImg" src="https://avatars.githubusercontent.com/u/185140105?v=4" alt="user img">
             </a>
         </nav>
-
     </div>
     <div class="content">
-    <section class="main">
-    <div>
-    <h1>welcome to rentel group<br><span>A place to find a place</span></h1>
-    <h3>Find your dream house by us</h3>
-    <a href="#services" class="main-btn"> view</a>
-    </div>
-</section>
-    <!--second-section-->
-     <section class="projects" id="services">
-        <h2 class="title">Homes around $685,000</h2>
-        <div class="content" >
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/appartment.jpeg">
-                </div>
-                <div class="project-info">
-    <p class="project-category">EGP 20,000,000</p>
-    <div class="project-description">
-    <P>Apartment for sale, badya</P>
-    <p>palm hills compound, Giza</p>
+        <div class="contentHeader">
+            <h1>welcome to Rental group<br><span>A place to find a place</span></h1>
+            <h3>Find your dream house by us</h3>
+            <a href="#cardContainer" class="contentHeader-btn"> view</a>
         </div>
-    <strong class="project-icon">
-        <div class="house-icons">
-            <span><i class="fa-solid fa-bed" ></i>4</span>
-            <span><i class="fa-solid fa-bath"></i>3</span>
-        </div>
-        
-        <a href="#" class="more-details">More details</a>
-    </strong>
-                </div>
+        <div class="searchCardContainer">
+            <div class="search">
+                <img src="svgs/solid/search.svg" alt="Search icon">
+                <input type="search" id="search" placeholder="Search...">
             </div>
-                <div class="project-card">
-                <div class="project-image">
-                    <img src="images/appartment2.jpeg">
-                </div>
-                <div class="project-info">
-    <p class="project-category">EGP 20,000,000</p>
-     <div class="project-description">
-    <P>Apartment for sale, badya</P>
-    <p>palm hills compound, Giza</p>
-        </div>
-    <strong class="project-icon">
-        <div class="house-icons">
-            <span><i class="fa-solid fa-bed" ></i>4</span>
-            <span><i class="fa-solid fa-bath"></i>3</span>
-        </div>
-        
-        <a href="#" class="more-details">More details</a>
-    </strong>
-                </div>
+            <div class="filter">
+                <img src="svgs/solid/filter.svg" alt="filter icon">
+                <select class="filter" id="filter">
+                    <option selected>All Category</option>
+                    <option></option>
+                </select>
             </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/appartment3.jpeg">
-                </div>
-                <div class="project-info">
-    <p class="project-category">EGP 20,000,000</p>
-    <div class="project-description">
-    <P>Apartment for sale, badya</P>
-    <p>palm hills compound, Giza</p>
         </div>
-    <strong class="project-icon">
-        <div class="house-icons">
-            <span><i class="fa-solid fa-bed" ></i>4</span>
-            <span><i class="fa-solid fa-bath"></i>3</span>
-        </div>
-        
-        <a href="#" class="more-details">More details</a>
-    </strong>
-                </div>
-            </div>
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/appartment4.jpeg">
-                </div>
-                <div class="project-info">
-    <p class="project-category">EGP 20,000,000</p>
-    <div class="project-description">
-    <P>Apartment for sale, badya</P>
-    <p>palm hills compound, Giza</p>
-        </div>
-    <strong class="project-icon">
-        <div class="house-icons">
-            <span><i class="fa-solid fa-bed" ></i>4</span>
-            <span><i class="fa-solid fa-bath"></i>3</span>
-        </div>
-        
-        <a href="#" class="more-details">More details</a>
-    </strong>
+        <div class="cardContainer" id="cardContainer">
+            <div class="card">
+                <img class="cardImg" src="img/appartment.jpeg" alt="card img">
+                <div class="cardInfo">
+                    <div class="cardDescription">
+                        <h3>EGP 20,000,000</h3>
+                        <p>Apartment for sale, badya</p>
+                    </div>
+                    <div class="cardNavigation">
+                        <div class="cardIcon">
+                            <p>2 <img src="svgs/solid/bed.svg" alt=""></p>
+                            <p>3 <img src="svgs/solid/bath.svg" alt=""></p>
+                            <p>90 CM&sup3;</p>
+                        </div>
+                        <a class="cardButton" href="#">More details</a>
+                    </div>
                 </div>
             </div>
         </div>
-     </section>
-</body>
-</html>
     </div>
     <div class="footer">
         <div class="footerLink">
