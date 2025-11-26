@@ -1,0 +1,68 @@
+:root {
+    --mainColor: #0095aa;
+    --secondaryColor: #000;
+    --textColor: #fff;
+    --backGroundColor: #fff;
+    --shadowColor: #dfdfdf;
+}
+
+body {
+    background-color: var(--backGroundColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.login_div,
+.signup {
+    background-color: var(--mainColor);
+    width: 330px;
+    padding: 25px;
+    margin: 15px 0;
+    border-radius: 15px;
+    box-shadow: 0 0 12px var(--shadowColor);
+    color: var(--textColor);
+}
+
+.login_div input,
+.signup input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--secondaryColor);
+    outline: none;
+}
+
+.login_div label input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.login_div button,
+.signup button {
+    padding: 8px 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    background: var(--secondaryColor);
+    color: var(--textColor);
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--textColor);
+    font-weight: bold;
+}
+
+a:hover {
+    color: #e6e6e6; 
+}
