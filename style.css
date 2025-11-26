@@ -25,6 +25,7 @@ body {
 .header {
     position: sticky;
     top: 20px;
+    z-index: 50;
     margin: 20px;
     padding: 15px;
     height: fit-content;
@@ -54,11 +55,12 @@ body {
     font-weight: bold;
     border: none;
     border-radius: 15px;
+    cursor: pointer;
     transition: all 0.2s;
     color: var(--secondaryColor);
 }
 
-#loginSignupLink{
+#loginSignupLink {
     display: block;
 }
 
@@ -199,7 +201,7 @@ body {
     background-color: var(--mainColor);
 }
 
-.search input::placeholder{
+.search input::placeholder {
     color: var(--textColor);
 }
 
@@ -225,7 +227,7 @@ body {
     background-color: #00000036;
 }
 
-.cardInfo{
+.cardInfo {
     width: calc(100% - 40px);
     padding: 20px;
 }
@@ -233,42 +235,92 @@ body {
 .cardNavigation {
     display: flex;
     justify-content: space-between;
+    justify-content: space-between;
     align-items: center;
     position: relative;
     bottom: -10px;
 }
 
 .cardIcon {
+    width: fit-content;
     display: flex;
     gap: 20px;
 }
-.cardIcon p{
+
+.cardIcon p {
     display: flex;
     align-items: center;
     font-weight: bold;
 }
-.cardIcon p img{
+
+.cardIcon p img {
     margin-left: 10px;
     width: 20px;
 }
 
-.cardNavigation a{
-    height: fit-content;
-    position: relative;
-    text-decoration: none;
-    font-size: 12px;
+.area {
     font-weight: bold;
-    border-radius: 10px;
-    padding: 10px 15px;
-    transition: all 0.2s;
-    color: var(--textColor);
-    background-color: var(--mainColor);
 }
 
-.cardNavigation a:hover {
+.CardForm {
+    margin: 40px;
+    display: none;
+    justify-content: center;
+}
+
+.addCardForm {
+    width: 60%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--backGroundColor);
+}
+
+.formHeader {
+    text-align: center;
+}
+
+.inputGroup {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputGroup label {
+    font-weight: bold;
+}
+
+.inputGroup input {
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--cardColor);
+}
+
+.inputGroup input::placeholder {
+    color: var(--mainColor);
+}
+
+.form-btn {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.form-btn button,
+.form-btn a {
+    width: fit-content;
+    padding: 0.9em 2em;
+    font-size: 1.1em;
+    font-weight: 600;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
     color: var(--textColor);
-    transition: all 0.2s;
-    transform: translateY(-5px);
-    box-shadow: -5px 5px 15px var(--shadowColor);
     background-color: var(--mainColor);
 }
