@@ -58,7 +58,12 @@ body {
     color: var(--secondaryColor);
 }
 
+#loginSignupLink{
+    display: block;
+}
+
 .userImg {
+    display: block;
     width: 25px;
     height: 25px;
     border-radius: 50%;

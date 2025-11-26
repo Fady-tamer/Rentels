@@ -70,7 +70,9 @@ body {
     font-weight: bold;
 }
 
-.inputGroup input {
+.inputGroup input,
+.inputGroup select,
+.inputGroup option {
     padding: 15px;
     outline: none;
     border: none;

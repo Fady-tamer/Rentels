@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="signUp.css">
     <link rel="icon" href="../img/icon wbg.png" type="image/x-icon">
     <title>Rentals</title>
 </head>
@@ -31,6 +31,14 @@
         <div class="inputGroup">
             <label for="userName">Confirm password</label>
             <input type="password" placeholder="Password...." minlength="8" required>
+        </div>
+        <div class="inputGroup">
+            <label for="accountType">Account Type</label>
+            <select name="role" id="role" required>
+                <option value="none" selected>--> Select Role <--</option>
+                <option value="Buyer">Buyer</option>
+                <option value="Seller">Seller</option>
+            </select>
         </div>
         <button class="login-btn">Sign Up</button>
         <p class="signText">You have an Account | <a class="signUpLink" href="login.html">login</a></p>
