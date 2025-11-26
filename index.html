@@ -10,11 +10,11 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="header" id="header">
         <a href="index.html"><img class="headerImg" src="img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
             <a class="navigationBarLink" href="index.html">Home</a>
-            <a class="navigationBarLink">Add card</a>
+            <a class="navigationBarLink" onclick="displayAddCard()">Add card</a>
             <a class="navigationBarLink" href="#">About Us</a>
             <a class="navigationBarLink" id="loginSignupLink" href="loginSignupPages/signUp.html">Login / Sign Up</a>
             <a href="userProfilePage/user.html">
@@ -22,7 +22,7 @@
             </a>
         </nav>
     </div>
-    <div class="content">
+    <div class="content" id="content">
         <div class="contentHeader">
             <h1>welcome to Rental group<br><span>A place to find a place</span></h1>
             <h3>Find your dream house by us</h3>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </div>
-    <div class="CardForm">
+    <div class="CardForm" id="CardForm">
         <form class="addCardForm" action="">
             <h1 class="formHeader">Add Card</h1>
             <div class="inputGroup">
@@ -70,6 +70,10 @@
             <div class="inputGroup">
                 <label for="userName">Description</label>
                 <input type="text" placeholder="Description...." required>
+            </div>
+            <div class="inputGroup">
+                <label for="userName">img</label>
+                <input type="text" placeholder="img url...." required>
             </div>
             <div class="inputGroup">
                 <label for="userName">Price</label>
@@ -89,11 +93,11 @@
             </div>
             <div class="form-btn">
                 <button type="submit" class="submit-btn">Submit</button>
-                <a class="cancel-btn">Cancel</a>
+                <a class="cancel-btn" onclick="cancelAddCard()">Cancel</a>
             </div>
         </form>
     </div>
-    <div class="footer">
+    <div class="footer" id="footer">
         <div class="footerLink">
             <a href="#">
                 <img src="svgs/brands/facebook.svg" alt="">
@@ -113,6 +117,7 @@
         </div>
         <p>&copy; 2025 All rights reserved.</p>
     </div>
+    <script src="scripts/index.js"></script>
 </body>
 
 </html>

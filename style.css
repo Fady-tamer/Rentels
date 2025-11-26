@@ -270,6 +270,7 @@ body {
 
 .addCardForm {
     width: 60%;
+    height: fit-content;
     padding: 20px;
     display: flex;
     flex-direction: column;
