@@ -16,10 +16,12 @@ body {
     margin: 0;
     min-height: 100vh;
     display: grid;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto 2fr auto;
 }
 
 .header {
+    position: sticky;
+    top: 20px;
     margin: 20px;
     padding: 15px;
     height: fit-content;
@@ -69,6 +71,8 @@ body {
 }
 
 .footer {
+    position: relative;
+    bottom: 0;
     height: fit-content;
     display: flex;
     flex-direction: column;
@@ -99,9 +103,10 @@ body {
 }
 
 .page {
-    max-width: 480px;
-    margin: 0 auto;
-    padding: 16px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .top-profile {
@@ -113,16 +118,15 @@ body {
 }
 
 .avatar {
-    width: 82px;
-    height: 82px;
-    border-radius: 50%;
-    background: #1f2933;
+    width: 150px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 6px 16px rgba(15, 23, 42, 0.35);
-    border: 3px solid #ffffff;
 }
 
 .avatar img {
@@ -132,75 +136,66 @@ body {
 }
 
 .name-line {
-    font-size: 14px;
+    font-size: 20px;
     margin-top: 6px;
-}
-
-.name-line .name {
-    color: #111827;
 }
 
 .username-highlight {
-    color: #ff3b7f;
-    font-weight: 700;
-    margin-right: 6px;
+    color: var(--mainColor);
+    font-weight: bold;
 }
-
-.msg-btn {
-    margin-top: 6px;
-    padding: 6px 12px;
-    border-radius: 999px;
-    border: 1px solid #d1d5db;
-    background: #ffffff;
-    font-size: 13px;
-    cursor: pointer;
-    color: #4b5563;
-    transition: 0.2s;
-}
-
 
 .card {
-    border: 1px solid #e5e7eb;
-    border-radius: 10px;
-    background: #ffffff;
-    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.08);
-    margin-top: 4px;
+    padding: 20px;
+    width: 500px;
     text-align: left;
+    border: none;
+    border-radius: 10px;
+    box-shadow: -15px 15px 25px var(--shadowColor);
+    background: var(--cardColor);
 }
 
 .card-header {
-    padding: 10px 12px 6px;
+    padding: 0px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .card-title {
-    font-size: 15px;
-    color: #ff3b7f;
-    font-weight: 600;
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--mainColor);
 }
 
 .card-edit {
-    font-size: 13px;
-    color: #7c3aed;
+    font-size: 15px;
     text-decoration: none;
+    color: var(--secondaryColor);
 }
 
 .card-body {
-    padding: 8px 12px 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 
 
 .field {
-    margin-bottom: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--backGroundColor);
 }
 
 .field-label {
     font-size: 13px;
-    font-weight: 600;
-    color: #111827;
-    margin-bottom: 1px;
+    font-weight: bold;
+    color: var(--secondaryColor);
 }
 
 .field-value {
