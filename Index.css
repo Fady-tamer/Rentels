@@ -23,29 +23,11 @@ body {
     gap: 20px;
 }
 
-.back {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    font-size: 20px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.2s;
-    color: var(--secondaryColor);
-}
-
-.back:hover {
-    transform: translateX(-15px);
-}
-
-.back img {
-    width: 25px;
-}
-
-.login {
+.login,
+.signUp {
     padding: 20px;
     width: 400px;
-    display: flex;
+    display: none;
     flex-direction: column;
     border: none;
     border-radius: 15px;
@@ -70,9 +52,14 @@ body {
     font-weight: bold;
 }
 
-.inputGroup input,
-.inputGroup select,
-.inputGroup option {
+.inputGroup input {
+    padding: 15px;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--backGroundColor);
+}
+.inputGroup select {
     padding: 15px;
     outline: none;
     border: none;
@@ -101,17 +88,40 @@ body {
     transform: translateY(-2px);
 }
 
-.signText {
+.toggleText {
     text-align: center;
     font-weight: bold;
 }
 
-.signUpLink {
+.toggleLink {
+    cursor: pointer;
     text-decoration: none;
     color: var(--mainColor);
 }
 
-.signUpLink:hover {
+.toggleLink:hover {
     color: #0096aa81;
     text-decoration: underline;
+}
+
+.active {
+    display: flex;
+}
+
+.success-msg {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.error-msg {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
 }
