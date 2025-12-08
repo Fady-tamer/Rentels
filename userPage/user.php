@@ -38,7 +38,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Home Page</title>
-    <link rel="stylesheet" href="User.css">
+    <link rel="stylesheet" href="user.css">
     <link rel="icon" href="../img/icon wbg.ico" type="image/x-icon">
 </head>
 
@@ -53,14 +53,18 @@ $conn->close();
     </div>
     <div class="content" id="content">
         <div class="contentHeader">
-            <h1>welcome to Rental group<br><span>A place to find a place</span></h1>
+            <h1>
+                <?php echo htmlspecialchars($_SESSION['username']); ?>
+                welcome to Rental group<br>
+            </h1>
+            <span>A place to find a place</span>
             <h3>Find your dream house by us</h3>
             <a href="#cardContainer" class="contentHeader-btn"> view</a>
         </div>
         <div class="searchCardContainer">
             <div class="search">
                 <img src="../svgs/solid/search.svg" alt="Search icon">
-                <input type="search" id="search" placeholder="Search...">
+                <input type="search" id="search" onkeyup="search()" placeholder="Search...">
             </div>
         </div>
         <div class="cardContainer" id="cardContainer">
@@ -71,7 +75,7 @@ $conn->close();
                         <div class="cardInfo">
                             <div class="cardDescription">
                                 <h3 class="cardName"><?php echo htmlspecialchars($product['name']); ?></h3>
-                                <h3>$<?php echo htmlspecialchars($product['price']); ?></h3>
+                                <h3>$<?php echo htmlspecialchars($product['price']); ?>/mon</h3>
                             </div>
                             <p><?php echo htmlspecialchars($product['description']); ?></p>
                             <div class="cardNavigation">
@@ -82,6 +86,15 @@ $conn->close();
                                             alt=""></p>
                                 </div>
                                 <p class="area"><?php echo htmlspecialchars($product['Area']) ?> CM&sup3;</p>
+                            </div>
+                        </div>
+                        <div class="cardButton">
+                            <button class="interested-btn" onclick="openModal()">interested</button>
+                        </div>
+                        <div id="customAlert" class="modal">
+                            <div class="modal-content">
+                                <p class="modalMessage">Thank you for your interest!</p>
+                                <p class="modalMessage">We will contact you soon.</p>
                             </div>
                         </div>
                     </div>
@@ -109,6 +122,7 @@ $conn->close();
         </div>
         <p>&copy; 2025 All rights reserved.</p>
     </div>
+    <script src="user.js"></script>
 </body>
 
 </html>

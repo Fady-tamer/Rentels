@@ -223,9 +223,11 @@ body {
     margin: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     border: none;
     border-radius: 20px;
-    background-color: var(--cardColor);
+    box-shadow: 0px 5px 20px var(--shadowColor);
+    background-color: var(--backGroundColor);
 }
 
 .cardImg {
@@ -243,7 +245,7 @@ body {
     padding: 20px;
 }
 
-.cardDescription{
+.cardDescription {
     display: flex;
     justify-content: space-between;
 }
@@ -282,6 +284,26 @@ body {
 
 .area {
     font-weight: bold;
+}
+
+.cardButton {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.cardButton button {
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--textColor);
+    background-color: red;
 }
 
 .CardForm {
@@ -346,4 +368,22 @@ body {
     cursor: pointer;
     color: var(--textColor);
     background-color: var(--mainColor);
+}
+
+.success-msg {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+}
+
+.error-msg {
+    padding: 10px;
+    margin-bottom: 20px;
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    border-radius: 5px;
 }

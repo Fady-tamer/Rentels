@@ -1,6 +1,11 @@
 <?php
 session_start();
 
+if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ../index.php");
+    exit();
+}
+
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -11,11 +16,6 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
-}
-
-if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
-    header("Location: ../index.php");
-    exit();
 }
 
 if (isset($_POST['card-btn'])) {
@@ -48,6 +48,19 @@ if ($result_fetch) {
     }
 }
 
+if (isset($_POST['delete_card'])) {
+    $card_id = filter_input(INPUT_POST, 'card_id', FILTER_VALIDATE_INT);
+    $stmt = $conn->prepare("DELETE FROM carddata WHERE card_id = ?");
+    $stmt->bind_param("i", $card_id);
+    $stmt->execute();
+    if ($stmt->affected_rows > 0) {
+        $message .= "<div class='success-msg'>Product deleted successfully.</div>";
+        header("Location: admin.php");
+    } else {
+        $message .= "<div class='error-msg'>Error deleting product: " . $conn->error . "</div>";
+    }
+}
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -57,13 +70,13 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Admin Dashboard</title>
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="admin.css">
     <link rel="icon" href="../img/icon wbg.png" type="image/x-icon">
 </head>
 
 <body>
     <div class="header" id="header">
-        <a href="index.html"><img class="headerImg" src="../img/project logo wbg.png" alt="header logo"></a>
+        <a href=""><img class="headerImg" src="../img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
             <a class="navigationBarLink" href="">Admin Dashboard</a>
             <a class="navigationBarLink" onclick="displayAddCard()">Add Card</a>
@@ -71,6 +84,7 @@ $conn->close();
         </nav>
     </div>
     <div class="content" id="content">
+        <?php echo $message; ?>
         <div class="cardContainer" id="cardContainer">
             <?php if (!empty($products)): ?>
                 <?php foreach ($products as $product): ?>
@@ -92,6 +106,10 @@ $conn->close();
                                 <p class="area"><?php echo htmlspecialchars($product['Area']) ?> CM&sup3;</p>
                             </div>
                         </div>
+                        <form action="admin.php" method="POST" class="cardButton">
+                            <input type="hidden" name="card_id" value="<?php echo $product['card_id'] ?>">
+                            <button type="submit" name="delete_card">Delete</button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
