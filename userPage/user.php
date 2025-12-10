@@ -47,7 +47,6 @@ $conn->close();
         <a href=""><img class="headerImg" src="../img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
             <a class="navigationBarLink" href="">Home</a>
-            <a class="navigationBarLink" href="">About Us</a>
             <a class="logOut-btn" href="logout.php" class="logout">Logout</a>
         </nav>
     </div>
@@ -91,15 +90,15 @@ $conn->close();
                         <div class="cardButton">
                             <button class="interested-btn" onclick="openModal()">interested</button>
                         </div>
-                        <div id="customAlert" class="modal">
-                            <div class="modal-content">
-                                <p class="modalMessage">Thank you for your interest!</p>
-                                <p class="modalMessage">We will contact you soon.</p>
-                            </div>
-                        </div>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal-content">
+            <p class="modalMessage">Thank you for your interest!</p>
+            <p class="modalMessage">We will contact you soon.</p>
         </div>
     </div>
     <div class="footer" id="footer">
@@ -122,7 +121,7 @@ $conn->close();
         </div>
         <p>&copy; 2025 All rights reserved.</p>
     </div>
-    <script src="user.js"></script>
+    <script src="User.js"></script>
 </body>
 
 </html>

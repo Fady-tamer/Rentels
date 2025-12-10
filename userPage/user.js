@@ -1,16 +1,11 @@
-function interested() {
-    alert('Thank you for your interest! We will contact you soon.');
-};
-
 function openModal() {
-    document.getElementById('customAlert').style.display = 'block';
-}
+    let msg = document.querySelector('.modal');
 
-window.onclick = function(event) {
-    const modal = document.getElementById('customAlert');
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
+    msg.style.display = 'block';
+
+    setTimeout(() => {
+        msg.style.display = 'none';
+    }, 1500);
 }
 
 function search(){
