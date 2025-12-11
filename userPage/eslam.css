@@ -161,9 +161,9 @@ body {
     flex-direction: column;
     border: none;
     border-radius: 15px;
-    background-image: url(../img/background.jpg);
+    background-image: url(../img/wide-angle1.jpg);
     background-size: cover;
-    background-position: center;
+    background-position: top;
 }
 
 .contentHeader h1 {
@@ -237,13 +237,13 @@ body {
     background-color: var(--backGroundColor);
 }
 
-.search{
+.search {
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.search input{
+.search input {
     outline: none;
     padding: 10px 20px;
     border: none;
@@ -257,7 +257,7 @@ body {
     color: var(--textColor);
 }
 
-.search img{
+.search img {
     width: 15px;
 }
 

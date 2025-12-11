@@ -1,0 +1,185 @@
+:root {
+    --mainColor: #0095aa;
+    --secondaryColor: #000;
+    --textColor: #fff;
+    --backGroundColor: #dfdfdf;
+    --cardColor: #ffffff;
+    --shadowColor: #5f5f5f;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+.header {
+    position: sticky;
+    top: 20px;
+    z-index: 50;
+    margin: 20px;
+    padding: 15px;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    border-radius: 15px;
+    background-color: var(--backGroundColor);
+}
+
+.headerImg {
+    width: 150px;
+}
+
+.navigationBar {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    gap: 15px;
+}
+
+.navigationBarLink {
+    display: flex;
+    width: 20px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+    color: var(--secondaryColor);
+    background-color: var(--mainColor);
+}
+
+.navigationBarLink img {
+    width: 20px;
+}
+
+.navigationBarLink p {
+    width: fit-content;
+    text-wrap: nowrap;
+    margin: 0;
+}
+
+.navigationBarLink:hover {
+    padding-right: 165px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+.small:hover {
+    padding-right: 100px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+.logOut-btn {
+    display: flex;
+    width: 20px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+    color: var(--secondaryColor);
+    background-color: #f44336;
+}
+
+.logOut-btn img {
+    width: 20px;
+}
+
+.logOut-btn p {
+    margin: 0;
+}
+
+.logOut-btn:hover {
+    padding-right: 80px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: #f44336;
+}
+
+.page-container {
+    margin: 0 40px;
+}
+
+.title-box {
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 15px;
+    border-bottom: 3px solid var(--mainColor);
+}
+
+.page-title {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--secondaryColor);
+}
+
+.messages-container {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.message-card {
+    width: 610px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--cardColor);
+}
+
+.message-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.msg-product-name {
+    font-size: 26px;
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.msg-product-id {
+    font-size: 1.2em;
+}
+
+.msg-product-email {
+    font-size: 1.2em;
+    font-weight: bold;
+}

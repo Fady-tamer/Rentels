@@ -55,7 +55,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Home Page</title>
-    <link rel="stylesheet" href="userr.css">
+    <link rel="stylesheet" href="eslam.css">
     <link rel="icon" href="../img/icon wbg.ico" type="image/x-icon">
 </head>
 

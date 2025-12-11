@@ -70,7 +70,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Admin Dashboard</title>
-    <link rel="stylesheet" href="Admin.css">
+    <link rel="stylesheet" href="adminn.css">
     <link rel="icon" href="../img/icon wbg.ico" type="image/x-icon">
 </head>
 
@@ -86,7 +86,7 @@ $conn->close();
                 <img src="../svgs/solid/add.svg" alt="">
                 <p>Add Card</p>
             </a>
-            <a class="navigationBarLink small">
+            <a class="navigationBarLink small" href="messages.php">
                 <img src="../svgs/solid/message.svg" alt="">
                 <p>messages</p>
             </a>
