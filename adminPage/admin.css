@@ -10,9 +10,6 @@
 html {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(../img/pexels-jakubzerdzicki-34126033.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
 }
 
 body {
@@ -50,6 +47,10 @@ body {
 }
 
 .navigationBarLink {
+    display: flex;
+    width: 20px;
+    align-items: center;
+    gap: 10px;
     padding: 10px;
     text-decoration: none;
     font-weight: bold;
@@ -57,121 +58,84 @@ body {
     border-radius: 15px;
     cursor: pointer;
     transition: all 0.2s;
+    overflow: hidden;
     color: var(--secondaryColor);
-}
-
-#loginSignupLink {
-    display: block;
-}
-
-.logOut-btn {
-    padding: 5px 10px;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 6px;
-    color: white;
-    background-color: #f44336;
-}
-
-.userImg {
-    display: block;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-}
-
-.navigationBarLink:hover {
-    color: var(--textColor);
-    transition: all 0.2s;
-    transform: translateY(-5px);
-    box-shadow: -5px 5px 15px var(--shadowColor);
     background-color: var(--mainColor);
 }
 
-.footer {
-    height: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
-    background-color: var(--backGroundColor);
-}
-
-.footerLink {
-    margin: 10px 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-}
-
-.footerLink img {
+.navigationBarLink img {
     width: 20px;
 }
 
-.footer p {
-    margin: 10px 0;
-    text-align: center;
-    color: var(--secondaryColor);
+.navigationBarLink p {
+    width: fit-content;
+    text-wrap: nowrap;
+    margin: 0;
+}
+
+.navigationBarLink:hover {
+    padding-right: 165px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+.small:hover {
+    padding-right: 100px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: var(--mainColor);
+}
+
+.logOut-btn {
+    display: flex;
+    width: 20px;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    text-decoration: none;
     font-weight: bold;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: all 0.2s;
+    overflow: hidden;
+    color: var(--secondaryColor);
+    background-color: #f44336;
+}
+
+.logOut-btn img {
+    width: 20px;
+}
+
+.logOut-btn p {
+    margin: 0;
+}
+
+.logOut-btn:hover {
+    padding-right: 80px;
+    transition: all 0.4s;
+    transform: translateY(-5px);
+    transform: translateX(-5px);
+    box-shadow: -5px 5px 15px var(--shadowColor);
+    color: var(--textColor);
+    background-color: #f44336;
 }
 
 .content {
     margin: 40px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-}
-
-.contentHeader {
-    height: fit-content;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-}
-
-.contentHeader h1 {
-    color: white;
-    font-size: 1.4em;
-    font-weight: 500;
-}
-
-.contentHeader h1 span {
-    display: inline-block;
-    margin-top: 10px;
-    color: antiquewhite;
-    font-size: 3em;
-    font-weight: 600;
-}
-
-.contentHeader h3 {
-    color: white;
-    font-size: 2em;
-    font-weight: 700;
-    letter-spacing: 1px;
-    margin-top: 10px;
-    margin-bottom: 30px;
-}
-
-.contentHeader-btn {
-    width: fit-content;
-    text-decoration: none;
-    color: var(--textColor);
-    background-color: var(--mainColor);
-    font-size: 1.1em;
-    font-weight: 600;
-    display: inline-block;
-    letter-spacing: 1px;
-    padding: 0.9em 2em;
-    border-radius: 10px;
-    transition: 0.5s ease;
-}
-
-.contentHeader-btn:hover {
-    background-color: var(--mainColor);
-    transform: scale(1.1);
+    border: none;
+    border-radius: 15px;
+    background-color: #dfdfdf;
 }
 
 .cardContainer {
@@ -182,43 +146,6 @@ body {
     border-radius: 15px;
 }
 
-.searchCardContainer {
-    margin-bottom: 20px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    border: none;
-    border-radius: 15px;
-    background-color: var(--backGroundColor);
-}
-
-.search,
-.filter {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.search input,
-.filter select {
-    outline: none;
-    padding: 10px 20px;
-    border: 1px solid #00000036;
-    outline: none;
-    border-radius: 10px;
-    color: var(--textColor);
-    background-color: var(--mainColor);
-}
-
-.search input::placeholder {
-    color: var(--textColor);
-}
-
-.search img,
-.filter img {
-    width: 15px;
-}
-
 .card {
     margin: 20px;
     display: flex;
@@ -227,14 +154,14 @@ body {
     border: none;
     border-radius: 20px;
     box-shadow: 0px 5px 20px var(--shadowColor);
-    background-color: var(--backGroundColor);
+    background-color: var(--cardColor);
 }
 
 .cardImg {
-    margin: 10px;
     height: 200px;
     border: none;
-    border-radius: 7.5px;
+    border-top-left-radius: 7.5px;
+    border-top-right-radius: 7.5px;
     background-color: #00000036;
 }
 

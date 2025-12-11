@@ -29,6 +29,23 @@ if ($result_fetch) {
     }
 }
 
+if (isset($_POST['interested-btn'])) {
+    $user_id = $_POST['user_id'];
+    $user_email = $_POST['user_email'];
+    $card_id = $_POST['card_id'];
+    $card_name = $_POST['card_name'];
+
+    $stmt = $conn->prepare("INSERT INTO interested (card_id, card_name, user_id, user_email) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("isis", $card_id, $card_name, $user_id, $user_email);
+
+    if ($stmt->execute()) {
+        $message = "<p class='success-msg' >Your interest has been recorded!</p>";
+    } else {
+        $message = "<p class='error-msg' >Error recording your interest: " . $stmt->error . "</p>";
+    }
+    $stmt->close();
+}
+
 $conn->close();
 ?>
 <!DOCTYPE html>
@@ -38,7 +55,7 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Home Page</title>
-    <link rel="stylesheet" href="user.css">
+    <link rel="stylesheet" href="userr.css">
     <link rel="icon" href="../img/icon wbg.ico" type="image/x-icon">
 </head>
 
@@ -46,8 +63,14 @@ $conn->close();
     <div class="header" id="header">
         <a href=""><img class="headerImg" src="../img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
-            <a class="navigationBarLink" href="">Home</a>
-            <a class="logOut-btn" href="logout.php" class="logout">Logout</a>
+            <a class="navigationBarLink" href="">
+                <img src="../svgs/solid/home.svg" alt="">
+                <p>Home</p>
+            </a>
+            <a class="logOut-btn" href="logout.php" class="logout">
+                <img src="../svgs/solid/arrow-right-from-bracket.svg" alt="">
+                <p>Logout</p>
+            </a>
         </nav>
     </div>
     <div class="content" id="content">
@@ -65,6 +88,9 @@ $conn->close();
                 <img src="../svgs/solid/search.svg" alt="Search icon">
                 <input type="search" id="search" onkeyup="search()" placeholder="Search...">
             </div>
+            <div class="message">
+                <?php echo $message; ?>
+            </div>
         </div>
         <div class="cardContainer" id="cardContainer">
             <?php if (!empty($products)): ?>
@@ -76,7 +102,7 @@ $conn->close();
                                 <h3 class="cardName"><?php echo htmlspecialchars($product['name']); ?></h3>
                                 <h3>$<?php echo htmlspecialchars($product['price']); ?>/mon</h3>
                             </div>
-                            <p><?php echo htmlspecialchars($product['description']); ?></p>
+                            <p class="description"><?php echo htmlspecialchars($product['description']); ?></p>
                             <div class="cardNavigation">
                                 <div class="cardIcon">
                                     <p><?php echo htmlspecialchars($product['bedRooms']) ?><img src="../svgs/solid/bed.svg"
@@ -87,18 +113,16 @@ $conn->close();
                                 <p class="area"><?php echo htmlspecialchars($product['Area']) ?> CM&sup3;</p>
                             </div>
                         </div>
-                        <div class="cardButton">
-                            <button class="interested-btn" onclick="openModal()">interested</button>
-                        </div>
+                        <form class="cardButton" method="post" action="user.php">
+                            <input type="hidden" name="card_id" value="<?php echo htmlspecialchars($product['card_id']); ?>">
+                            <input type="hidden" name="card_name" value="<?php echo htmlspecialchars($product['name']); ?>">
+                            <input type="hidden" name="user_id" value="<?php echo htmlspecialchars($_SESSION['user_id']); ?>">
+                            <input type="hidden" name="user_email" value="<?php echo htmlspecialchars($_SESSION['email']); ?>">
+                            <button class="interested-btn" name="interested-btn">interested</button>
+                        </form>
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
-        </div>
-    </div>
-    <div class="modal">
-        <div class="modal-content">
-            <p class="modalMessage">Thank you for your interest!</p>
-            <p class="modalMessage">We will contact you soon.</p>
         </div>
     </div>
     <div class="footer" id="footer">
@@ -121,7 +145,7 @@ $conn->close();
         </div>
         <p>&copy; 2025 All rights reserved.</p>
     </div>
-    <script src="User.js"></script>
+    <script src="userr.js"></script>
 </body>
 
 </html>

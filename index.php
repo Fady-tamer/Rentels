@@ -50,7 +50,7 @@ if (isset($_POST['login-btn'])) {
     $username = $conn->real_escape_string($_POST['userName']);
     $password = $_POST['pass'];
 
-    $stmt = $conn->prepare("SELECT user_id, username, password, role FROM user WHERE username = ?");
+    $stmt = $conn->prepare("SELECT user_id, username, email, password, role FROM user WHERE username = ?");
     $stmt->bind_param("s", $username);
     $stmt->execute();
     $result = $stmt->get_result();
@@ -61,6 +61,7 @@ if (isset($_POST['login-btn'])) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['user_id'];
             $_SESSION['username'] = $user['username'];
+            $_SESSION['email'] = $user['email'];
             $_SESSION['role'] = $user['role'];
 
             if ($user['role'] === 'admin') {

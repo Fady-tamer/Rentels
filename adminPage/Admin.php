@@ -70,17 +70,30 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rentals - Admin Dashboard</title>
-    <link rel="stylesheet" href="admin.css">
-    <link rel="icon" href="../img/icon wbg.png" type="image/x-icon">
+    <link rel="stylesheet" href="Admin.css">
+    <link rel="icon" href="../img/icon wbg.ico" type="image/x-icon">
 </head>
 
 <body>
     <div class="header" id="header">
         <a href=""><img class="headerImg" src="../img/project logo wbg.png" alt="header logo"></a>
         <nav class="navigationBar">
-            <a class="navigationBarLink" href="">Admin Dashboard</a>
-            <a class="navigationBarLink" onclick="displayAddCard()">Add Card</a>
-            <a class="logOut-btn" href="logout.php" class="logout">Logout</a>
+            <a class="navigationBarLink" href="">
+                <img src="../svgs/solid/home.svg" alt="">
+                <p>Admin Dashboard</p>
+            </a>
+            <a class="navigationBarLink small" onclick="displayAddCard()">
+                <img src="../svgs/solid/add.svg" alt="">
+                <p>Add Card</p>
+            </a>
+            <a class="navigationBarLink small">
+                <img src="../svgs/solid/message.svg" alt="">
+                <p>messages</p>
+            </a>
+            <a class="logOut-btn" href="logout.php" class="logout">
+                <img src="../svgs/solid/arrow-right-from-bracket.svg" alt="">
+                <p>Logout</p>
+            </a>
         </nav>
     </div>
     <div class="content" id="content">
@@ -151,26 +164,6 @@ $conn->close();
                 <a class="cancel-btn" onclick="cancelAddCard()">Cancel</a>
             </div>
         </form>
-    </div>
-    <div class="footer" id="footer">
-        <div class="footerLink">
-            <a href="#">
-                <img src="../svgs/brands/facebook.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="../svgs/brands/instagram.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="../svgs/brands/github.svg" alt="">
-            </a>
-            <a href="#">
-                <img src="../svgs/brands/linkedin.svg" alt="">
-            </a>
-            <a href="mailto:">
-                <img src="../svgs/solid/envelope.svg" alt="">
-            </a>
-        </div>
-        <p>&copy; 2025 All rights reserved.</p>
     </div>
     <script src="admin.js"></script>
 </body>
