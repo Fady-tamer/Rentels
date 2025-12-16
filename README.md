@@ -2,52 +2,13 @@
 
 ## About
 
-Project about Rentals/Real Estate Marketplace
-
-## Objectives
-
+This project about Rentals/Real Estate Marketplace provided fantastic experience in database design, backend logic, and frontend performance optimization.
 ```
-  • make accounts of seller and buyer
-  • how seller to add products post
-  • make Live Search/Filter
-```
-
-## Pages
-
-```
-  • Login/sign up page
-  • catalog (main) page
-```
-
-## Database
-
-```
-  • Account
-      |
-      |___( seller )
-      |        |
-      |        |___( fullName) => varchar
-      |        |___( email ) => varchar
-      |        |___( phone ) => varchar
-      |        |___( password ) => varchar
-      |
-      |___( buyer )
-              |
-              |___( fullName) => varchar
-              |___( email ) => varchar
-              |___( password ) => varchar
-
-  • products
-      |
-      |_____( type ) => varchar
-      |_____( price ) => int
-      |_____( address ) => varchar
-      |          |
-      |          |___( streat )
-      |          |___( area )
-      |          |___( Governorate )
-      |
-      |_____( area ) => int
-      |_____( bedroom ) => int
-      |_____( bathroom ) => int
+Here’s what you’ll find:
+ 🔹 Dual Account System : 
+       Dedicated user flows for property Sellers (admin) and Buyers (user).
+ 🔹 Live Search : 
+       Implemented robust filtering on crucial criteria like price, area size bedrooms, and location.
+ 🔹 Database Design:
+       Structured schemas for both Account and Products to handle all listing details.
 ```
